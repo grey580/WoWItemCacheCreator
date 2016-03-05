@@ -65,7 +65,7 @@ namespace WoWItemCacheCreator
         private string getJson(int id)
         {
             try {
-                string url = "https://us.api.battle.net/wow/item/" + id + "?locale=en_US&apikey=YOUR_API_KEY";
+                string url = "https://us.api.battle.net/wow/item/" + id + "?locale=en_US&apikey=" + textBox4.Text;
                 dynamic wc = new WebClient();
                 string json = wc.DownloadString(url);
                 string path = textBox2.Text;
@@ -144,6 +144,11 @@ namespace WoWItemCacheCreator
         private void button3_Click(object sender, EventArgs e)
         {
             backgroundWorker1.CancelAsync();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
